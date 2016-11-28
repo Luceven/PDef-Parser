@@ -1,0 +1,1 @@
+{int x, float y, x = x, {int a}, {a = x}}, x = y}

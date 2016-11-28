@@ -1,0 +1,54 @@
+package tokenizer;
+
+public class Token {
+
+	public enum TokenType { identT, intT, floatT, typeT, addOpT, mulOpT ,errorT, 
+	                        assignT, rbT, lbT, rpT, lpT, commaT, eofT };
+
+	private TokenType type;  // type of this particular token
+	private String    name;  // string of characters associated with
+						     // this particular token
+	private int position;
+	private int line;
+
+    public Token(TokenType t, String s, int l, int pos) {
+    	type = t;
+    	name = s;
+    	line = l;
+    	position = pos;
+    }
+
+	public TokenType getType() { return type; }
+		// Pre:  type has a value
+		// Post: return type
+	public String getName() { return name; }
+		// Pre:  name has a value
+		// Post: return name
+
+	public String toString() 
+		// Pre:  type and name have values
+		// Post: return string containing character form of
+		//       "(line, position) type(name)"
+	{
+		String out = "(" + (new Integer(line)).toString() + ", " +
+		                   (new Integer(position)).toString() + ")\t" +
+						    "Token - " + type.toString();
+		switch (type) {
+		case identT:
+		case intT:
+		case floatT:
+		case typeT:
+		case addOpT:
+		case mulOpT:
+		case errorT:
+			out += "( " + name + " )"; 
+			break;
+		default: // nothing to do
+			break;
+		}
+		
+						   
+		return out;
+	}
+
+}

@@ -1,0 +1,34 @@
+Solution
+
+testing with test0 - should be no parse error
+Program parsed!
+
+
+testing with test1 - parse errors
+
+Expected ident, int, float, or left paren, but saw the token COMMA_T( , )<0,6>
+
+Expected ASSIGN_T, but saw the token IDENT_T( b )<0,11>
+
+Expected comma, right brace, end of tokens token, but saw the token RP_T( ) )<0,25>
+
+Expected type, ident, or left brace, but saw the token EOT_T(  )<1,1>
+
+Expected RCB_T, but saw the token EOT_T(  )<1,1>
+
+Expected RCB_T, but saw the token EOT_T(  )<1,1>
+
+
+testing with test2 - parse errors
+
+Expected comma, right brace, end of tokens token, but saw the token LCB_T( { )<0,8>
+
+Expected EOT_T, but saw the token COMMA_T( , )<0,24>
+
+
+testing with test3 - should be no parse error
+Program parsed!
+
+
+testing with test4 - should be no parse error
+Program parsed!
